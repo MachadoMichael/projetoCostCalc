@@ -1,0 +1,221 @@
+body {
+  background-color: rgba(28, 45, 121, 0.918);
+}
+
+.header {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+
+}
+
+.menu li {
+  margin-left: 40px;
+  color: whitesmoke;
+}
+
+.menu li:hover {
+  color: rgb(62, 86, 226);
+}
+
+.menuNav {
+
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+}
+
+.box {
+  width: 15vw;
+  height: 30vh;
+  background-color: rgba(28, 45, 121, 0.918);
+  border: 3px rgb(27, 27, 27) solid;
+  margin: 10px;
+}
+
+.box:hover {
+  border: 3px white solid;
+  cursor: pointer;
+}
+
+#productPainel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container {
+  display: flex;
+  margin: auto;
+  margin-top: 2%;
+  width: 95vw;
+  height: 79vh;
+  background-color: rgb(174, 174, 177);
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#itens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.input {
+  width: 5vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.listInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding-left: 5%;
+  width: 100%;
+
+}
+
+label {
+  color: white;
+}
+
+#ingredientes {
+  display: inline-block;
+  width: 20vw;
+  max-height: 79vh;
+  background-color: rgb(94, 99, 99);
+  box-sizing: border-box;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+#boxPainels {
+  display: inline;
+}
+
+.boxItens {
+  display: inline-block;
+  background-color: rgba(175, 66, 39, 0.925);
+  width: 290px;
+  height: 55px;
+  border: 1px black solid;
+  margin: 0.2%;
+  overflow: auto;
+}
+
+.textBox {
+  padding: 0;
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+ 
+}
+
+#boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.caixa {
+  display: flex;
+  width: 100%;
+  margin-left: 5px;
+
+}
+
+#PainelTotal {
+  background-color: rgba(18, 18, 19, 0.836);
+
+}
+
+#painelSoma {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.valores {
+  width: 50%;
+}
+
+#nome_produto_cadastro {
+  height: 30%;
+  margin: 1%;
+}
+
+#btn_salvar_produto {
+  width: 15%;
+  height: 4vh;
+  margin-left: 1%;
+  background-color: rgba(175, 66, 39, 0.925);
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px rgba(18, 18, 19, 0.836) solid;
+
+}
+
+#btn_salvar_produto:hover {
+  border: 1px white solid;
+  box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.2);
+  ;
+}
+
+.guide {
+  display: block;
+  margin: auto;
+  padding-top: 1%;
+  width: 100%;
+  justify-content: center;
+}
+
+.steps {
+  width: 50%;
+  margin: auto;
+  height: 20%;
+  margin-top: 2%;
+}
+
+.step {
+  margin-bottom: 1%;
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  background-color: rgb(27, 27, 27);
+}
