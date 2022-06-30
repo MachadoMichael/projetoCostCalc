@@ -1,12 +1,12 @@
 import React from "react";
-import Input from "./Input";
+import Input from "../Input";
 
 function ItemList(props) {
 
     return (
         <div id="itens">
-            <Input handle={props.handle} 
-                itens={[
+            <Input handle={props.handle}
+                inputs={[
                     "Margem",
                     "Acucar_Mascavo_Minamel",
                     "Acucar_ref_Caravelas",
@@ -57,7 +57,7 @@ function ItemList(props) {
                     "Requeijao_crem_cheddar_Nazareno",
                     "Requeijao_crem_Catupiry",
                     "Requeijao_crem_4Queijos_Catupiry",
-                    ]}>
+                ]}>
             </Input>
         </div>
     )

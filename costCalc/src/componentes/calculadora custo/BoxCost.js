@@ -1,13 +1,12 @@
 import React from "react";
 
-function BoxItens(props) {
+function BoxCost(props) {
 
     let valor = props.valor
     const listItens = props.name.map(function criandoItem(name, index) {
         return (
             <div key={index} className="boxItens">
-                <h5 className="textBox">{name}: R$ {valor[name]}</h5>
-                
+                <h5 className="textBox">{name}: {valor[name]}</h5>
             </div>
         )
         
@@ -21,4 +20,4 @@ function BoxItens(props) {
     )   
 }
 
-export default BoxItens
+export default BoxCost

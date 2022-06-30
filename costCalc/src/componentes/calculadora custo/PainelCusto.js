@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import BoxResult from './BoxResult';
+import BoxCost from './BoxCost';
 import TotalPainel from './TotalPainel';
 import ItemList from './ItemList';
+
 
 function PainelCusto() {
 
@@ -178,12 +179,12 @@ function PainelCusto() {
 
       <div id='ingredientes'>
         <h2>Digite o material</h2>
-        <ItemList handle={handleChange} /*reset={resetValores} soma={Soma}*/       ></ItemList>
+        <ItemList handle={handleChange}></ItemList>
       </div>
 
       <div id='boxes'>
         <div className='caixa'>
-          <BoxResult
+          <BoxCost
             valor={Values}
             name={[
               "Margem",
@@ -237,7 +238,7 @@ function PainelCusto() {
               "Req_crem_Catupiry",
               "Req_crem_4Queijos_Catupiry",
               ]}>
-          </BoxResult>
+          </BoxCost>
         </div>
 
         <div className='caixa' id='PainelTotal'>

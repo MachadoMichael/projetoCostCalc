@@ -219,3 +219,18 @@ label {
   padding: 1%;
   background-color: rgb(27, 27, 27);
 }
+
+#IngredienteData{
+  background-color: aqua;
+}
+
+.dataItens{
+  background-color: blue;
+  border: 3px black solid;
+}
+
+.salvarProduto{
+  width: 34%;
+  height: 30px;
+  margin-top: 10px;
+}

@@ -1,16 +1,24 @@
 import './App.css';
-import PainelCusto from './componentes/PainelCusto';
+import PainelCusto from './componentes/calculadora custo/PainelCusto';
 import Header from './componentes/Header';
-import PainelIngredientes from './componentes/PainelIngredientes';
+import PainelCadastroIngrediente from './componentes/cadastro de produtos/PainelCadastroIngrediente';
 import { useEffect, useState } from 'react'
 import GuideUser from './componentes/Guide';
+import productsReducer from './reducers/productsReducer';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux/es/exports';
 
+
+
+const store = createStore(productsReducer)
+console.log(store.getState())
+store.subscribe(() => { console.log(store.getState()) })
 
 function App() {
 
   const [page, setPage] = useState()
   useEffect(() => {
-    setPage('guia')
+    setPage(0)
   }, [])
 
   function changeStage(props) {
@@ -40,17 +48,19 @@ function App() {
   if (page === 0) {
     return (
       <div>
-        <Header name="Nord"
-          nav={[
-            "Preço dos ingredientes",
-            "Calculadora de custo",
-            "Produtos cadastrados",
-            "Calculadora de compras"
-          ]}
-          stage={changeStage}>
-        </Header>
+        <Provider store={store}>
+          <Header name="Nord"
+            nav={[
+              "Preço dos ingredientes",
+              "Calculadora de custo",
+              "Produtos cadastrados",
+              "Calculadora de compras"
+            ]}
+            stage={changeStage}>
+          </Header>
 
-        <PainelIngredientes></PainelIngredientes>
+          <PainelCadastroIngrediente></PainelCadastroIngrediente>
+        </Provider>
       </div>
     )
   }
@@ -58,17 +68,19 @@ function App() {
   if (page === 1) {
     return (
       <div>
-        <Header name="Nord"
-          nav={[
-            "Preço dos ingredientes",
-            "Calculadora de custo",
-            "Produtos cadastrados",
-            "Calculadora de compras"
-          ]}
-          stage={changeStage}>
-        </Header>
+        <Provider store={store}>
+          <Header name="Nord"
+            nav={[
+              "Preço dos ingredientes",
+              "Calculadora de custo",
+              "Produtos cadastrados",
+              "Calculadora de compras"
+            ]}
+            stage={changeStage}>
+          </Header>
 
-        <PainelCusto></PainelCusto>
+          <PainelCusto></PainelCusto>
+        </Provider>
       </div>
     );
   }
