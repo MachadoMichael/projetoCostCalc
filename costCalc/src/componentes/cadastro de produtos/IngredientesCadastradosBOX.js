@@ -18,7 +18,7 @@ export default function IngredientesData() {
   const listItens = listaProdutosCadastrados.map(caixaProdutosCadastrados)
 
   return (
-    <div id="IngredienteData">
+    <div>
       {listItens}
     </div>
 

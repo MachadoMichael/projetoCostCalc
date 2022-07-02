@@ -11,4 +11,7 @@ export function deleteItem(id) {
     return { type: 'DELETE_ITEM', payload: id }
 }
 
+export function CalcCost() {
+    return { type: 'CALC_COST' }
+}
 

@@ -11,7 +11,6 @@ import { Provider } from 'react-redux/es/exports';
 
 
 const store = createStore(productsReducer)
-console.log(store.getState())
 store.subscribe(() => { console.log(store.getState()) })
 
 function App() {
