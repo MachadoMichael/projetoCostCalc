@@ -9,7 +9,7 @@ function PainelCusto() {
   const arrayNameProducts = listaProdutosCadastrados.map(nameProducts)
   const arrayPriceProducts = listaProdutosCadastrados.map(priceProducts)
   const dispatch = useDispatch()
-  let somandoCusto = 0;
+  var somandoCusto = 0;
 
   function nameProducts(item, index) {
 
@@ -39,19 +39,11 @@ function PainelCusto() {
 
         dispatch({ type: 'CALC_COST', payload: [...listaProdutosCadastrados] })
 
-
-        console.log(listaProdutosCadastrados[index].cost)
-
         listaProdutosCadastrados.map(function soma(item, index) {
           somandoCusto += item.cost
           dispatch({ type: 'ADD_COST_TOTAL', payload: somandoCusto })
 
         })
-
-
-
-        console.log('somandoCusto')
-        console.log(somandoCusto)
 
         break
       default: novo_estado[input] = t
@@ -73,9 +65,6 @@ function PainelCusto() {
       <div id='boxes'>
 
         <BoxCost />
-
-
-
         <TotalPainel />
 
       </div>
