@@ -4,14 +4,13 @@ import { useSelector } from 'react-redux'
 
 function BoxCost() {
 
-  const listaProdutosCadastrados = useSelector((state) => state)
+  const listaProdutosCadastrados = useSelector((state) => state.product)
   function caixaCustoProdutos(item, index) {
 
     return (
       <div key={index} className="boxItens">
-        <h5 className="textBox">Produto: {(item.name)}</h5>
-        <h5 className="textBox">Preço(Kg): R${(item.price)}</h5>
-        <h5 className="textBox">Custo: R${(item.cost)}</h5>
+        <h5 className="textBox"> {(item.name)}</h5>
+        <h5 className="textBox">R${(item.cost)}</h5>
       </div>
     )
   }

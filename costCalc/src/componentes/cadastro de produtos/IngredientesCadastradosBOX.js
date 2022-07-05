@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 export default function IngredientesData() {
 
-  const listaProdutosCadastrados = useSelector((state) => state)
+  const listaProdutosCadastrados = useSelector((state) => state.product)
 
   function caixaProdutosCadastrados(item, index) {
 

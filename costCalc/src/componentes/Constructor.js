@@ -1,4 +1,4 @@
-export default function Ingrediente(nome, preço, id) {
+export default function Constructor(nome, preço, id) {
     return {
         name: nome,
         price: preço,

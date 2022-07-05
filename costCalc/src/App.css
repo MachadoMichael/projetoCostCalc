@@ -19,19 +19,26 @@ body {
 
 }
 
+#logo{
+  color: whitesmoke;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .menu li {
   margin-left: 40px;
   color: whitesmoke;
 }
 
-.menu li:hover {
-  color: rgb(62, 86, 226);
-}
-
 .menuNav {
-
+  color: whitesmoke;
   font-weight: bold;
   text-decoration: none;
+}
+
+.menuNav:hover {
+  color: rgb(62, 86, 226);
+
 }
 
 h1 {
@@ -137,31 +144,21 @@ label {
   font-size: 15px;
   text-align: center;
   margin: 0;
- 
+
 }
 
 #boxes {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.caixa {
-  display: flex;
-  width: 100%;
-  margin-left: 5px;
-
-}
-
-#PainelTotal {
-  background-color: rgba(18, 18, 19, 0.836);
-
+ 
 }
 
 #painelSoma {
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: rgba(18, 18, 19, 0.836);
 }
 
 .valores {
@@ -173,7 +170,7 @@ label {
   margin: 1%;
 }
 
-#btn_salvar_produto {
+.btn_total_painel {
   width: 15%;
   height: 4vh;
   margin-left: 1%;
@@ -186,10 +183,16 @@ label {
 
 }
 
-#btn_salvar_produto:hover {
+.btn_total_painel:hover {
   border: 1px white solid;
   box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.2);
   ;
+}
+
+#input_total_painel{
+  margin: 1%;
+  width: 6%;
+  height: 3vh;
 }
 
 .guide {
@@ -214,12 +217,12 @@ label {
   background-color: rgb(27, 27, 27);
 }
 
-.dataItens{
+.dataItens {
   background-color: blue;
   border: 3px black solid;
 }
 
-.salvarProduto{
+.salvarProduto {
   width: 34%;
   height: 30px;
   margin-top: 15px;
