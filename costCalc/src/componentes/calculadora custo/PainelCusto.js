@@ -5,7 +5,7 @@ import Input from "../Input";
 import { useDispatch, useSelector } from 'react-redux'
 
 function PainelCusto() {
-  const listaProdutosCadastrados = useSelector((state) => state.product)
+  const listaProdutosCadastrados = useSelector((state) => state.ingredient)
   const arrayNameProducts = listaProdutosCadastrados.map(nameProducts)
   const arrayPriceProducts = listaProdutosCadastrados.map(priceProducts)
   const dispatch = useDispatch()
@@ -39,10 +39,10 @@ function PainelCusto() {
 
         dispatch({ type: 'CALC_COST', payload: [...listaProdutosCadastrados] })
 
-        listaProdutosCadastrados.map(function soma(item, index) {
+        listaProdutosCadastrados.map((item, index) => {
           somandoCusto += item.cost
           dispatch({ type: 'ADD_COST_TOTAL', payload: somandoCusto })
-
+          return somandoCusto
         })
 
         break
@@ -52,8 +52,8 @@ function PainelCusto() {
   }
 
   return (
-    <div id='container'>
-      <div id='ingredientes'>
+    <div className='container'>
+      <div className='ingredientes'>
         <h2>Digite o material</h2>
         <Input
           handle={handleChange}

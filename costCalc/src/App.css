@@ -81,7 +81,7 @@ h4 {
 
 }
 
-#container {
+.container {
   display: flex;
   margin: auto;
   margin-top: 2%;
@@ -91,7 +91,6 @@ h4 {
   box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.2);
 
 }
-
 
 .input {
   width: 5vw;
@@ -114,7 +113,7 @@ label {
   color: white;
 }
 
-#ingredientes {
+.ingredientes {
   display: inline-block;
   width: 20vw;
   max-height: 79vh;
@@ -139,12 +138,34 @@ label {
   overflow: auto;
 }
 
+.FoodBox {
+  display: inline-block;
+  background-color: rgba(38, 128, 72, 0.925);
+  width: 10%;
+  height: 191px;
+  border: 1px black solid;
+  margin: 0.2%;
+  overflow: auto;
+}
+
 .textBox {
   padding: 0;
   font-size: 15px;
   text-align: center;
   margin: 0;
 
+}
+
+.btn_delete_item{
+  background: none;
+  border: none;
+  position: sticky;
+  font-weight: bold;
+}
+
+.btn_delete_item:hover{
+  color: white;
+  cursor: pointer;
 }
 
 #boxes {
@@ -174,6 +195,7 @@ label {
   width: 15%;
   height: 4vh;
   margin-left: 1%;
+  margin-right: 1%;
   background-color: rgba(175, 66, 39, 0.925);
   border: none;
   color: white;
@@ -190,7 +212,7 @@ label {
 }
 
 #input_total_painel{
-  margin: 1%;
+
   width: 6%;
   height: 3vh;
 }

@@ -1,6 +1,6 @@
 
 
-export default function sellPrice(state = 0, action) {
+export default function marginReducer(state = 0, action) {
 
     switch (action.type) {
         case 'ADD_MARGIN':

@@ -2,10 +2,14 @@ import './App.css';
 import PainelCusto from './componentes/calculadora custo/PainelCusto';
 import Header from './componentes/Header';
 import PainelCadastroIngrediente from './componentes/cadastro de produtos/PainelCadastroIngrediente';
-import GuideUser from './componentes/Guide';
-import productsReducer from './reducers/productsReducer';
+import GuideUser from './componentes/guia/Guide';
+import PainelFood from './componentes/cadastro alimento/PainelFood';
+
+import ingredientReducer from './reducers/ingredientReducer';
 import costReducer from './reducers/costReducer';
-import SellPriceReducer from './reducers/SellPriceReducer';
+import marginReducer from './reducers/marginReducer';
+import foodReducer from './reducers/foodReducer';
+
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux/es/exports';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,8 +18,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const allReducers = combineReducers({
   cost: costReducer,
-  product: productsReducer,
-  sell: SellPriceReducer,
+  ingredient: ingredientReducer,
+  margin: marginReducer,
+  food: foodReducer,
 })
 const store = createStore(allReducers)
 store.subscribe(() => { console.log(store.getState()) })
@@ -38,7 +43,7 @@ function App() {
           <Route path='/Guia' element={<GuideUser />}></Route>
           <Route path='/Cadastro' element={<PainelCadastroIngrediente />}></Route>
           <Route path='/Custo' element={<PainelCusto />}></Route>
-          <Route path='/Produtos' element={0}></Route>
+          <Route path='/Produtos' element={<PainelFood />}></Route>
           <Route path='/Compras' element={0}></Route>
         </Routes>
       </Router>

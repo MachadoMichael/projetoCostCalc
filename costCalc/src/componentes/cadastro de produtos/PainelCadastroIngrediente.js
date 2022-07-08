@@ -3,13 +3,14 @@ import '../../App.css';
 import Input from '../Input';
 import IngredientesCadastradosBOX from './IngredientesCadastradosBOX';
 import { useDispatch } from "react-redux";
-import { addItem } from '../../actions/listActions'
+import Constructor from "../Constructor"
 
 
 function PainelIngredientes() {
   const dispatch = useDispatch()
   let produtoCadastrado = {}
-
+  var lastId = 0
+  
   function handleChangeCost(event, key) {
     let t = event.target.value
 
@@ -25,9 +26,9 @@ function PainelIngredientes() {
   }
 
   return (
-    <div id='container'>
+    <div className='container'>
 
-      <div id='ingredientes'>
+      <div className='ingredientes'>
         <h2>Cadastre o seu produto </h2>
         <Input
           handle={handleChangeCost}
@@ -36,7 +37,7 @@ function PainelIngredientes() {
             "Preço"
           ]}>
         </Input>
-        <button className="salvarProduto" onClick={() => { dispatch(addItem(produtoCadastrado.Ingrediente, produtoCadastrado.Preço)) }}> Salvar </button>
+        <button className="salvarProduto" onClick={() => { dispatch({ type: 'ADD_ITEM', payload: Constructor(produtoCadastrado.Ingrediente, produtoCadastrado.Preço, lastId++) }) }}> Salvar </button>
 
       </div>
 

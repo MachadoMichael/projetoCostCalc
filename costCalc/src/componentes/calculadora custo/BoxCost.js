@@ -1,10 +1,9 @@
 import React from "react";
 import { useSelector } from 'react-redux'
 
-
 function BoxCost() {
 
-  const listaProdutosCadastrados = useSelector((state) => state.product)
+  const listaProdutosCadastrados = useSelector((state) => state.ingredient)
   function caixaCustoProdutos(item, index) {
 
     return (

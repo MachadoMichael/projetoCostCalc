@@ -3,6 +3,6 @@ export default function Constructor(nome, preço, id) {
         name: nome,
         price: preço,
         id: id,
-        cost: ''
+        cost: 0
     }
 }
